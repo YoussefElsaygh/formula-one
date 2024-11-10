@@ -48,3 +48,11 @@ Before you start, make sure you have the following installed on your machine:
   ```bash
   npm install -g @ionic/cli
   ```
+
+  ```bash
+  npm install
+  ```
+
+```bash
+  npm start
+```
