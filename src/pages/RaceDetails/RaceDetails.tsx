@@ -6,7 +6,7 @@ import {
   IonItemDivider,
 } from "@ionic/react";
 import { useParams } from "react-router";
-import { useGetRaceDetailsQuery, useGetRacesQuery } from "../../api/ergastApi";
+import { useGetRaceDetailsQuery } from "../../api/ergastApi";
 import { ListView } from "../../components/UI/ListView/ListView";
 import { RaceResult } from "../../types/RaceDetails";
 import { Page } from "../../components/UI/Page/Page";

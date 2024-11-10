@@ -21,7 +21,7 @@ export const Races = () => {
   const { year } = useParams<{ year: "string" }>();
   const limit = 5;
   const [pageNo, setPageNo] = useState(1);
-  const { data, isLoading, isError, refetch } = useGetRacesQuery({
+  const { data, isLoading, isError, refetch, isFetching } = useGetRacesQuery({
     pageNo,
     limit,
     season: year,
@@ -47,7 +47,10 @@ export const Races = () => {
 
   const dispatch = useAppDispatch();
   return (
-    <Page title={data ? `Races - ${year}` : "Races"} isLoading={isLoading}>
+    <Page
+      title={data ? `Races - ${year}` : "Races"}
+      isLoading={isLoading || isFetching}
+    >
       {isError ? (
         <ErrorComponnet error={"Couldn't load Races! Please try again"} />
       ) : (
